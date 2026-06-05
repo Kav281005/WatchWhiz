@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your Watchlist</h1>
+<ul>
+  <% user.watchlist.forEach(function(imdbID) { %>
+    <li>
+      <%= imdbID %>
+      <form action="/remove-from-watchlist" method="POST" style="display:inline">
+        <input type="hidden" name="imdbID" value="<%= imdbID %>" />
+        <button type="submit">Remove</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+
+</body>
+</html>

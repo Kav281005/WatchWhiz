@@ -1,0 +1,305 @@
+/* HomeDashboard.css */
+
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.dashboard-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('https://t3.ftcdn.net/jpg/05/62/25/26/360_F_562252610_Watb1rsYXzmDnCDqxA2CFEsS72o8D05E.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.dashboard-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+  z-index: 1;
+}
+
+.dashboard-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.dashboard-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  background: linear-gradient(to right, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #94a3b8;
+  max-width: 600px;
+}
+
+/* Main Content Area */
+.dashboard-main {
+  padding: 3rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Top Stats/Summary Section */
+.counts {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-section {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #334155;
+}
+
+.dashboard-section.full-width {
+  width: 100%;
+  flex: none;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Watchlist Link */
+.watchlist-link {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.watchlist-link:hover {
+  text-decoration: underline;
+}
+
+/* Recently Watched Horizontal Scroll */
+.recent-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0f172a;
+}
+
+.recent-item {
+  flex: 0 0 120px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.recent-item:hover {
+  transform: translateY(-5px);
+}
+
+.recent-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.recent-item span {
+  display: block;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* Movie Grid */
+.dash {
+  width: 100%;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.movie-card-link {
+  text-decoration: none;
+}
+
+.movie-card {
+  background-color: #1e293b;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.movie-year {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Watchlist Buttons */
+.watchlist-icon {
+  margin-top: auto;
+}
+
+.add-btn, .in-watchlist-btn, .login-btn {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #2563eb;
+}
+
+.in-watchlist-btn {
+  background-color: #059669;
+  color: white;
+  cursor: default;
+}
+
+.login-btn {
+  background-color: #334155;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 9999px;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #475569;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 2rem 1rem;
+  }
+  
+  .counts {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .dashboard-section {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .movie-poster {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  .movie-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
